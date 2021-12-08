@@ -73,6 +73,7 @@ class _TicTacToeState extends State<TicTacToe> {
                                 ),
                               ),
                             );
+                            break;
                           }
                         }
                         for (var j = 0; j < 3; j += 1) {
@@ -88,6 +89,7 @@ class _TicTacToeState extends State<TicTacToe> {
                                 ),
                               ),
                             );
+                            break;
                           }
                         }
                         if (belgilar[0] == belgilar[4] &&
