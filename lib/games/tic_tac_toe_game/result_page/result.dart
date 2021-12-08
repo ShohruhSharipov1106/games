@@ -1,8 +1,8 @@
 import 'package:games/constants/imports.dart';
 
 class ResultPage extends StatelessWidget {
-  String TTTWinner;
-  ResultPage(this.TTTWinner);
+  String winner;
+  ResultPage(this.winner);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class ResultPage extends StatelessWidget {
       body: AlertDialog(
         title: const Text("Congratulations"),
         content: Text(
-          TTTWinner == "X" ? "Winner: X Player" : "Winner: O Player",
+          winner == "X" ? "Winner: X Player" : "Winner: O Player",
         ),
         actions: [
           Row(
@@ -21,7 +21,9 @@ class ResultPage extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(color: Colors.transparent),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: Row(
                   children: const [
                     Icon(
